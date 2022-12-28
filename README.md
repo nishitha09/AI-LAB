@@ -1,4 +1,4 @@
-#PROGRAM 
+# PROGRAM 
 
 graph = {<br>
 '1' : ['2','10'],<br>
@@ -37,6 +37,8 @@ Following is the Breadth-First Search<br>
 1 2 10 3 8 4 9 5 6 7<br>
 
 
+# PROGRAM 
+
 
 graph = {<br>
 '5' : ['3','7'],<br>
@@ -61,9 +63,9 @@ def dfs(visited, graph, node):  #function for dfs <br>
 print("Following is the Depth-First Search")<br>
 dfs(visited, graph, '5')<br>
 
-OUTPUT:
+OUTPUT:<br>
 
-Following is the Depth-First Search
+Following is the Depth-First Search<br>
 5
 3
 2
@@ -74,58 +76,61 @@ Following is the Depth-First Search
 6
 
 
-from queue import PriorityQueue
-import matplotlib.pyplot as plt
-import networkx as nx
-# for implementing BFS | returns path having lowest cost
-def best_first_search(source, target, n):
- visited = [0] * n
- visited[source] = True
- pq = PriorityQueue()
- pq.put((0, source))
- while pq.empty() == False:
-   u = pq.get()[1]
+# PROGRAM
 
-   print(u, end=" ") # the path having lowest cost
-   if u == target:
+
+from queue import PriorityQueue<br>
+import matplotlib.pyplot as plt<br>
+import networkx as nx<br>
+#for implementing BFS | returns path having lowest cost<br>
+def best_first_search(source, target, n):<br>
+ visited = [0] * n<br>
+ visited[source] = True<br>
+ pq = PriorityQueue(<br>
+ pq.put((0, source))<br>
+ while pq.empty() == False:<br>
+   u = pq.get()[1]<br>
+
+   print(u, end=" ") # the path having lowest cost<br>
+   if u == target:<br>
      break
-   for v, c in graph[u]:
-     if visited[v] == False:
-       visited[v] = True
-       pq.put((c, v))
-       print()
-# for adding edges to graph
-def addedge(x, y, cost):
- graph[x].append((y, cost))
- graph[y].append((x, cost))
+   for v, c in graph[u]:<br>
+     if visited[v] == False:<br>
+       visited[v] = True<br>
+       pq.put((c, v))<br>
+       print()<br>
+#for adding edges to graph<br>
+def addedge(x, y, cost):<br>
+ graph[x].append((y, cost))<br>
+ graph[y].append((x, cost))<br>
 
-v = int(input("Enter the number of nodes: "))
-graph = [[] for i in range(v)] # undirected Graph
-e = int(input("Enter the number of edges: "))
-print("Enter the edges along with their weights:")
-for i in range(e):
- x, y, z = list(map(int, input().split()))
- addedge(x, y, z)
-source = int(input("Enter the Source Node: "))
-target = int(input("Enter the Target/Destination Node: "))
-print("Path: ", end = "")
-best_first_search(source, target, v)
+v = int(input("Enter the number of nodes: "))<br>
+graph = [[] for i in range(v)] # undirected Graph<br>
+e = int(input("Enter the number of edges: "))<br>
+print("Enter the edges along with their weights:")<br>
+for i in range(e):<br>
+ x, y, z = list(map(int, input().split()))<br>
+ addedge(x, y, z)<br>
+source = int(input("Enter the Source Node: ")<br>)
+target = int(input("Enter the Target/Destination Node: "))<br>
+print("Path: ", end = "")<br>
+best_first_search(source, target, v)<br>
 
-OUTPUT:
+OUTPUT:<br>
 
-Enter the number of nodes: 4
-Enter the number of edges: 5
-Enter the edges along with their weights:
-0 1 1
-0 2 1
-0 3 2 
-2 3 2
-1 3 3
-Enter the Source Node: 2
-Enter the Target/Destination Node: 1
-Path: 2 
-0 
-1 
+Enter the number of nodes: 4<br>
+Enter the number of edges: 5<br>
+Enter the edges along with their weights:<br>
+0 1 1<br>
+0 2 1<br>
+0 3 2<br> 
+2 3 2<br>
+1 3 3<br>
+Enter the Source Node: 2<br>
+Enter the Target/Destination Node: 1<br>
+Path: 2<br> 
+0<br> 
+1<br> 
 
 
 from collections import defaultdict
