@@ -258,7 +258,7 @@ def train(c,t):<br>
     for i, val in enumerate(t):<br> 
         if val == "Yes":<br> 
             specific_hypothesis = c[i].copy()<br> 
-            break<br> 
+            break
              
     for i, val in enumerate(c):<br> 
         if t[i] == "Yes":<br> 
