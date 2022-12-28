@@ -3,7 +3,7 @@
 graph = {<br>
 '1' : ['2','10'],<br>
 '2' : ['3','8'],<br>
-'3' : ['4'],<br><br>
+'3' : ['4'],<br>
 '4' : ['5','6','7'],<br>
 '5' : [],<br>
 '6' : [],<br>
@@ -29,7 +29,7 @@ def bfs(visited, graph, node): #function for BFS<br>
 
 #Driver Code
 print("Following is the Breadth-First Search")<br>
-bfs(visited, graph, '1')    # function calling<br>
+bfs(visited, graph, '1')#function calling<br>
 
 OUTPUT:<br>
 
