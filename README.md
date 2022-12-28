@@ -50,9 +50,8 @@ graph = {<br>
 '4' : ['8'],<br>
 '8' : []<br>
 }<br>
-visited = set() # Set to keep track of visited nodes of graph<br>.
-
-def dfs(visited, graph, node):  #function for dfs <br>
+visited = set() # Set to keep track of visited nodes of graph<br>
+def dfs(visited, graph, node):  #function for dfs<br>
     if node not in visited:<br>
         print (node)<br>
         visited.add(node)<br>
@@ -66,14 +65,14 @@ dfs(visited, graph, '5')<br>
 OUTPUT:<br>
 
 Following is the Depth-First Search<br>
-5
-3
-2
-1
-4
-8
-7
-6
+5<br>
+3<br>
+2<br>
+1<br>
+4<br>
+8<br>
+7<br>
+6<br>
 
 
 # PROGRAM
@@ -139,7 +138,7 @@ from collections import defaultdict<br>
 jug1, jug2, aim = 5,7,4<br> 
 visited = defaultdict(lambda: False)<br> 
 def waterJugSolver(amt1, amt2):<br> 
- if (amt1 == aim and amt2 == 0) or (amt2 == aim and amt1 == 0)<br> :
+ if (amt1 == aim and amt2 == 0) or (amt2 == aim and amt1 == 0):<br>
    print(amt1, amt2)<br> 
    return True<br> 
  if visited[(amt1, amt2)] == False:<br> 
@@ -173,61 +172,65 @@ Steps:<br>
 0 4<br> 
 True<br> 
 
-
-def TowerOfHanoi(n , source, destination, auxiliary):
-    if n==1:
-        print ("Move disk 1 from source",source,"to destination",destination)
-        return
-    TowerOfHanoi(n-1, source, auxiliary, destination)
-    print ("Move disk",n,"from source",source,"to destination",destination)
-    TowerOfHanoi(n-1, auxiliary, destination, source)
-
-n = 3
-TowerOfHanoi(n,'A','B','C')
-
-OUTPUT:
-
-Move disk 1 from source A to destination B
-Move disk 2 from source A to destination C
-Move disk 1 from source B to destination C
-Move disk 3 from source A to destination B
-Move disk 1 from source C to destination A
-Move disk 2 from source C to destination B
-Move disk 1 from source A to destination B
+# PROGRAM 
 
 
-# Using a Python dictionary to act as an adjacency list
-graph = {
-'5' : ['3','7'],
-'3' : ['2', '4'],
-'7' : ['6'],
-'6': [],
-'2' : ['1'],
-'1':[],
-'4' : ['8'],
-'8' : []
-}
-visited = set() # Set to keep track of visited nodes of graph.
+def TowerOfHanoi(n , source, destination, auxiliary):<br> 
+    if n==1:<br> 
+        print ("Move disk 1 from source",source,"to destination",destination)<br> 
+        return<br> 
+    TowerOfHanoi(n-1, source, auxiliary, destination)<br> 
+    print ("Move disk",n,"from source",source,"to destination",destination)<br> 
+    TowerOfHanoi(n-1, auxiliary, destination, source)<br> 
 
-def dfs(visited, graph, node):  #function for dfs 
-    if node not in visited:
-        print (node)
-        visited.add(node)
-        for neighbour in graph[node]:
-            dfs(visited, graph, neighbour)
+n = 3<br> 
+TowerOfHanoi(n,'A','B','C')<br> 
 
-# Driver Code
-print("Following is the Depth-First Search")
-dfs(visited, graph, '5')
+OUTPUT:<br> 
 
-OUTPUT:
+Move disk 1 from source A to destination B<br> 
+Move disk 2 from source A to destination C<br> 
+Move disk 1 from source B to destination C<br> 
+Move disk 3 from source A to destination B<br> 
+Move disk 1 from source C to destination A<br> 
+Move disk 2 from source C to destination B<br> 
+Move disk 1 from source A to destination B<br> 
 
-Following is the Depth-First Search
-5
-3
-2
-1
-4
-8
-7
-6
+
+# PROGRAM
+
+<br> 
+graph = {<br> 
+'5' : ['3','7'],<br> 
+'3' : ['2', '4']<br> ,
+'7' : ['6'],<br> 
+'6': [],<br> 
+'2' : ['1'],<br> 
+'1':[],<br> 
+'4' : ['8'],<br> 
+'8' : []<br> 
+}<br> 
+visited = set() # Set to keep track of visited nodes of graph.<br> 
+
+def dfs(visited, graph, node):  #function for dfs<br>  
+    if node not in visited:<br> 
+        print (node)<br> 
+        visited.add(node)<br> 
+        for neighbour in graph[node]:<br> 
+            dfs(visited, graph, neighbour)<br> 
+
+#Driver Code<br> 
+print("Following is the Depth-First Search")<br> 
+dfs(visited, graph, '5')<br> 
+
+OUTPUT:<br> 
+
+Following is the Depth-First Search<br> 
+5<br> 
+3<br> 
+2<br> 
+1<br> 
+4<br> 
+8<br> 
+7<br> 
+6<br> 
