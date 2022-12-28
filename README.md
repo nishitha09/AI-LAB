@@ -259,8 +259,7 @@ def train(c,t):<br>
         if val == "Yes":<br> 
             specific_hypothesis = c[i].copy()<br> 
             break
-             
-    for i, val in enumerate(c):<br> 
+      for i, val in enumerate(c):<br> 
         if t[i] == "Yes":<br> 
             for x in range(len(specific_hypothesis)):<br> 
                 if val[x] != specific_hypothesis[x]:<br> 
@@ -272,3 +271,16 @@ def train(c,t):<br>
  
 #obtaining the final hypothesis<br> 
 print("The final hypothesis is:",train(d,target))<br> 
+
+
+OUTPUT:<br> 
+
+   Sunny  Warm Normal  Strong Warm.1    Same  Yes<br> 
+0  Sunny  Warm   High  Strong   Warm    Same  Yes<br> 
+1  Rainy  Cold   High  Strong   Warm  Change   No<br> 
+2  Sunny  Warm   High  Strong   Cool  Change  Yes<br> 
+The attributes are:  [['Sunny' 'Warm' 'High' 'Strong' 'Warm' 'Same']<br> 
+ ['Rainy' 'Cold' 'High' 'Strong' 'Warm' 'Change']<br> 
+ ['Sunny' 'Warm' 'High' 'Strong' 'Cool' 'Change']]<br> 
+The target is:  ['Yes' 'No' 'Yes']<br> 
+The final hypothesis is: ['Sunny' 'Warm' 'High' 'Strong' '?' '?']<br> 
