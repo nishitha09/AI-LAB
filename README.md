@@ -31,10 +31,10 @@ def bfs(visited, graph, node): #function for BFS<br>
 print("Following is the Breadth-First Search")<br>
 bfs(visited, graph, '1')    # function calling<br>
 
-OUTPUT:
+OUTPUT:<br>
 
-Following is the Breadth-First Search
-1 2 10 3 8 4 9 5 6 7 
+Following is the Breadth-First Search<br>
+1 2 10 3 8 4 9 5 6 7<br>
 
 
 graph = {
