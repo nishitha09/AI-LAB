@@ -132,44 +132,46 @@ Path: 2<br>
 0<br> 
 1<br> 
 
+# PROGRAM
 
-from collections import defaultdict
-jug1, jug2, aim = 5,7,4
-visited = defaultdict(lambda: False)
-def waterJugSolver(amt1, amt2):
- if (amt1 == aim and amt2 == 0) or (amt2 == aim and amt1 == 0):
-   print(amt1, amt2)
-   return True
- if visited[(amt1, amt2)] == False:
-   print(amt1, amt2)
-   visited[(amt1, amt2)] = True
-   return (waterJugSolver(0, amt2) or
- waterJugSolver(amt1, 0) or
- waterJugSolver(jug1, amt2) or
- waterJugSolver(amt1, jug2) or
- waterJugSolver(amt1 + min(amt2, (jug1-amt1)),
- amt2 - min(amt2, (jug1-amt1))) or
- waterJugSolver(amt1 - min(amt1, (jug2-amt2)),
- amt2 + min(amt1, (jug2-amt2))))
- else:
-   return False
-print("Steps: ")
-waterJugSolver(0, 0)
 
-OUTPUT:
+from collections import defaultdict<br> 
+jug1, jug2, aim = 5,7,4<br> 
+visited = defaultdict(lambda: False)<br> 
+def waterJugSolver(amt1, amt2):<br> 
+ if (amt1 == aim and amt2 == 0) or (amt2 == aim and amt1 == 0)<br> :
+   print(amt1, amt2)<br> 
+   return True<br> 
+ if visited[(amt1, amt2)] == False:<br> 
+   print(amt1, amt2)<br> 
+   visited[(amt1, amt2)] = True<br> 
+   return (waterJugSolver(0, amt2) or<br> 
+ waterJugSolver(amt1, 0) or<br> 
+ waterJugSolver(jug1, amt2) or<br> 
+ waterJugSolver(amt1, jug2) or<br> 
+ waterJugSolver(amt1 + min(amt2, (jug1-amt1)),<br> 
+ amt2 - min(amt2, (jug1-amt1))) or<br> 
+ waterJugSolver(amt1 - min(amt1, (jug2-amt2)),<br> 
+ amt2 + min(amt1, (jug2-amt2))))<br> 
+ else:<br> 
+   return False<br> 
+print("Steps: ")<br> 
+waterJugSolver(0, 0)<br> 
 
-Steps: 
-0 0
-5 0
-5 7
-0 7
-5 2
-0 2
-2 0
-2 7
-5 4
-0 4
-True
+OUTPUT:<br> 
+
+Steps:<br>  
+0 0<br> 
+5 0<br> 
+5 7<br> 
+0 7<br> 
+5 2<br> 
+0 2<br> 
+2 0<br> 
+2 7<br> 
+5 4<br> 
+0 4<br> 
+True<br> 
 
 
 def TowerOfHanoi(n , source, destination, auxiliary):
