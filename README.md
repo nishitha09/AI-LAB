@@ -37,28 +37,29 @@ Following is the Breadth-First Search<br>
 1 2 10 3 8 4 9 5 6 7<br>
 
 
-graph = {
-'5' : ['3','7'],
-'3' : ['2', '4'],
-'7' : ['6'],
-'6': [],
-'2' : ['1'],
-'1':[],
-'4' : ['8'],
-'8' : []
-}
-visited = set() # Set to keep track of visited nodes of graph.
 
-def dfs(visited, graph, node):  #function for dfs 
-    if node not in visited:
-        print (node)
-        visited.add(node)
-        for neighbour in graph[node]:
-            dfs(visited, graph, neighbour)
+graph = {<br>
+'5' : ['3','7'],<br>
+'3' : ['2', '4'],<br>
+'7' : ['6'],<br>
+'6': [],<br>
+'2' : ['1'],<br>
+'1':[],<br>
+'4' : ['8'],<br>
+'8' : []<br>
+}<br>
+visited = set() # Set to keep track of visited nodes of graph<br>.
 
-# Driver Code
-print("Following is the Depth-First Search")
-dfs(visited, graph, '5')
+def dfs(visited, graph, node):  #function for dfs <br>
+    if node not in visited:<br>
+        print (node)<br>
+        visited.add(node)<br>
+        for neighbour in graph[node]:<br>
+            dfs(visited, graph, neighbour)<br>
+
+#Driver Code<br>
+print("Following is the Depth-First Search")<br>
+dfs(visited, graph, '5')<br>
 
 OUTPUT:
 
