@@ -266,8 +266,7 @@ def train(c,t):<br>
                     specific_hypothesis[x] = '?<br> 
                 else:<br> 
                     pass<br> 
-                 
-    return specific_hypothesis<br> 
+      return specific_hypothesis<br> 
  
 #obtaining the final hypothesis<br> 
 print("The final hypothesis is:",train(d,target))<br> 
