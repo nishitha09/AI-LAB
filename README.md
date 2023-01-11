@@ -7,7 +7,7 @@ graph = {<br>
 '5' : [],<br>
 '6' : [],<br>
 '7' : [],<br>
-'8' : ['9']<br>,
+'8' : ['9'],<br>
 '9' : [],<br>
 '10' : []<br>
 }<br>
@@ -18,7 +18,7 @@ def bfs(visited, graph, node): #function for BFS<br>
   queue.append(node)<br>
    while queue:          # Creating loop to visit each node<br>
     m = queue.pop(0) <br>
-    print (m, end = " ") <br>
+    print (m, end = " ")<br>
      for neighbour in graph[m]:<br>
       if neighbour not in visited:<br>
         visited.append(neighbour)<br>
@@ -27,7 +27,7 @@ def bfs(visited, graph, node): #function for BFS<br>
 print("Following is the Breadth-First Search")<br>
 bfs(visited, graph, '1')    # function calling<br>
 
-**OUTPUT:**
+**OUTPUT:**<br>
 Following is the Breadth-First Search<br>
 1 2 10 3 8 4 9 5 6 7 <br>
 graph = {<br>
