@@ -53,11 +53,11 @@ def dfs(visited, graph, node):  #function for dfs<br>
         visited.add(node)<br>
         for neighbour in graph[node]:<br>
             dfs(visited, graph, neighbour)<br>
-# Driver Code<br>
+#Driver Code<br>
 print("Following is the Depth-First Search")<br>
 dfs(visited, graph, '5')<br>
 
-**output:**<br>
+**OUTPUT:**<br>
 
 Following is the Depth-First Search<br>
 5<br>
